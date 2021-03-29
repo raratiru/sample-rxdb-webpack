@@ -7,7 +7,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 //process.exit();
 
 
-const plugins = [];
+const plugins =[];
 if (process.env.NODE_ENV === 'disc')
     plugins.push(new BundleAnalyzerPlugin());
 

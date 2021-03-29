@@ -1,9 +1,18 @@
-import { createRxDatabase } from 'rxdb';
+import {
+    createRxDatabase,
+    addRxPlugin
+} from 'rxdb';
 
 addRxPlugin(require('pouchdb-adapter-idb'));
 
-// const db = await createRxDatabase({
-//   name: 'mydatabase',
-//   adapter: 'idb' // name of the adapter
-// });
-// console.dir(db)
+async function run() {
+  const db = await createRxDatabase({
+    name: 'heroesdb',           // <- name
+    adapter: 'idb',          // <- storage-adapter
+    password: 'myPassword',     // <- password (optional)
+    multiInstance: true,         // <- multiInstance (optional, default: true)
+    eventReduce: false // <- eventReduce (optional, default: true)
+  });
+  console.dir(db);
+}
+run();
