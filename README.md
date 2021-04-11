@@ -10,4 +10,4 @@ Versions follow the `package.json` in the [rxdb repository](https://github.com/p
 It uses [replication-graphql](https://rxdb.info/replication-graphql.html) based on [the example](https://github.com/pubkey/rxdb/blob/master/examples/graphql/client/index.js).
 
 
- A schema has to be provided in the template.
+ A schema has to be provided in the template that contains the fields: `id`, `nameEl`, `nameEn`, `inactive`, `modified`.
